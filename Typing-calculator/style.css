@@ -1,0 +1,87 @@
+body{
+margin: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+overflow: hidden;
+background: linear-gradient(135deg, hsl(223, 43%, 14%), #070a14);
+}
+
+
+#calculator{
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+background: linear-gradient(135deg, #0b0f1a, #070a14);
+border-radius: 20px;
+width: 90%;
+max-width: 600px;
+overflow: hidden;
+}
+
+
+#display{
+width: 100%;
+padding: 15px;
+font-size: 8vw; /* scales with screen */
+color: white;
+text-align: left;
+border: none;
+background-color: #0a0f20;
+}
+
+
+#keys{
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 10px;
+padding: 20px;
+}
+
+
+button{
+width: 100%;
+aspect-ratio: 1/1; /* keeps buttons square */
+border-radius: 20px;
+border: none;
+background: #0a0f20;
+color: white;
+font-size: 5vw; /* scales with screen */
+font-weight: bold;
+cursor: pointer;
+box-shadow: 0 0 8px #00e5ff, 0 0 16px #00e5ff inset;
+transition: 0.2s ease;
+}
+
+
+
+button:hover{
+background: #111a33;
+color: #15ff87;
+box-shadow: 0 0 12px #15ff87, 0 0 24px #15ff87, 0 0 36px #15ff87 inset;
+}
+
+
+button:active{
+transform: scale(0.95);
+box-shadow: 0 0 5px #ff59f8, 0 0 15px #ff59f8 inset;
+color: #ff59f8;
+}
+
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+#display { font-size: 10vw; }
+button { font-size: 6vw; }
+}
+
+
+@media (min-width: 481px) and (max-width: 768px) {
+#display { font-size: 6vw; }
+button { font-size: 4vw; }
+}
+
+
+@media (min-width: 769px) {
+#display { font-size: 3rem; }
+button { font-size: 2rem; }
+}
